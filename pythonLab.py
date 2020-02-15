@@ -1,34 +1,44 @@
 import shutil
 
-destino = '/home/damianossotirakis/PycharmProjects/autoBoots/fileDirectory1/'
-origem = '/home/damianossotirakis/PycharmProjects/autoBoots/fileDirectory2/'
+baseDirectory = '/home/damianossotirakis/__Wiki/GitHub/Dansotirakis/PythonLab/'
+destino = baseDirectory+'fileDirectory2/'
+origem = baseDirectory+'fileDirectory1/'
 file = 'testeCopy.txt'
 
 
+######################[Copia arquivos]###########################
+#################################################################
 #shutil.copyfile(origem + file, destino + file)
+
+
+######################[Move arquivos]############################
+#################################################################
 #shutil.move(origem + file, destino + file)
 
-##Modo escrita
-#arquivo = open(destino+file, 'w')
 
-##Sobresecreve conteudo do arquivo
-#arquivo.write("sobres")
-#arquivo.close()
-
-##Leitura linha linha
+####################[Leitura de arquivo]#########################
+#################################################################
 #arquivo = open(destino+file, 'r')
 # for linha in arquivo:s]
 #    print(linha)
 #arquivo.close()
 
-##Sobrescreve conteudo especifico
-with open(destino+file) as f:
-    newText = f.read().replace("Ors", "Teste")
 
-with open(destino+file, 'w') as fileLoop:
-        fileLoop.write(newText)
+###############[Sobresecreve conteudo do arquivo]################
+#################################################################
+#arquivo = open(destino+file, 'w')
+#arquivo.write("sobres")
+#arquivo.close()
 
-arquivo = open(destino+file, 'r')
-for linha in arquivo:
-    print(linha)
-arquivo.close()
+
+##############[Sobrescreve conteudo especifico]##################
+#################################################################
+#with open(destino+file) as f:
+#    newText = f.read().replace("Ors", "Teste")
+#with open(destino+file, 'w') as fileLoop:
+#        fileLoop.write(newText)
+#arquivo = open(destino+file, 'r')
+#for linha in arquivo:
+#    print(linha)
+#arquivo.close()
+
