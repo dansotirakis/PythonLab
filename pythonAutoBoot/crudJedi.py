@@ -20,7 +20,12 @@ directoryRootCode = directoryRoot + "__tlog/"
 directoryFolder = "java/br/com/ticketlog/booking/microservice/"
 directoryFolderPromotion = directoryFolder + "promotion/"
 directoryFolderEstablishment = directoryFolder + "establishment/"
-
+directoryFrontResource = (
+    "/home/damianossotirakis/__Zallpy/__res/structureBackOffice/src/"
+)
+directoryFront = (
+    "/home/damianossotirakis/__Zallpy/__tlog/portaloficinas-backoffice/src/"
+)
 # --Templates
 directoryResourcePromotion = directoryResource + "structurePromoAPI/"
 directoryResourceEstablishment = directoryResource + "structureAPI/"
@@ -779,7 +784,32 @@ def create_establishment_be(en_name, migration, en_migration):
         fileLoop.write(newText)
 
 
-# -- ABCD
+def create_front_be(en_name):
+    # --Form
+    # Criar diretório
+    shutil.copyfile(
+        directoryFrontResource + "app/Deffault/index.js",
+        directoryFront + "app/" + en_name,
+    )
+    # --Table
+    # Criar diretório
+    # Criar diretório
+    shutil.copyfile(
+        directoryFrontResource + "app/Deffault/components/DeffaultList/index.js",
+        directoryFront + "app/" + en_name + "/components/" + en_name + "List/index.js",
+    )
+    # --Services
+    shutil.copyfile(
+        directoryFrontResource + "common/services/deffaultService.js",
+        directoryFront + "common/services/" + en_name + "Service.js",
+    )
+    # --Route
+    # novas linhas
+    # --Sidebar
+    # novas linhas
+
+
+# -- ABCD Jedi
 inputOption = input("API Promotion (1) Establishment (2) : ")
 if inputOption == "1":
     create_promotion_be(entityName, migrationName, entityMigration)
