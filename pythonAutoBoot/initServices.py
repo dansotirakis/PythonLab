@@ -12,7 +12,7 @@ directoryApiPromotion = "portaloficinas-api-promo/"
 
 print("init - Config")
 cmd = ['gnome-terminal']
-cmd.extend(['-x', 'bash', '-c', (directoryRoot+directoryConfig)+'init.sh; exec $SHELL' ])
+cmd.extend(['-x', 'bash', '-c', (directoryRoot+directoryConfig)+'init-config.sh; exec $SHELL' ])
 subprocess.Popen(cmd, stdout=subprocess.PIPE)
 
 time.sleep(15)
