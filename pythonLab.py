@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import shutil
+import os
 from six.moves import input
 
 baseDirectory = "/home/damianossotirakis/__Wiki/GitHub/Dansotirakis/PythonLab/"
@@ -105,3 +106,5 @@ def append_specific_line(file_name, lines_to_append, param):
 #################################################################
 # inputObejct = input("Entity   : ")
 # append_specific_line(destino + file, inputObejct + "\n", param1)
+
+os.mkdir("dir/dir/dir")
