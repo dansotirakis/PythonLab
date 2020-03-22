@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-directoryRoot = "/home/damianossotirakis/__Zallpy/__tlog/"
+directoryRoot = "/home/damianos/Desktop/zallpyCode/"
 directoryConfig = "portaloficinas-config/"
 directoryEureka = "portaloficinas-eureka/"
 directoryGateway = "portaloficinas-gateway/"
